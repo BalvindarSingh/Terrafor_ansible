@@ -1,0 +1,15 @@
+---
+- name: Install Java and Nginx
+  hosts: ec2_instances
+  become: yes  # To run tasks with elevated privileges (e.g., sudo)
+
+  tasks:
+    - name: Install Java
+      apt:
+        name: openjdk-11-jre
+        state: present
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
