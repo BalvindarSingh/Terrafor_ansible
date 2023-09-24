@@ -5,8 +5,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-teraform" {
-    ami = var.instance_ami
-  instance_type = var.instanceType
+    ami = "ami-053b0d53c279acc90"
+    instance_type = "t2.micro"
   
 } 
 
